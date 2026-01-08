@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Stack+Sans+Headline:wght@200..700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #0a1911;
+  --color-white: #f7f7f7;
+  --color-green: #00ffbc;
+  --fontSize-p: 1em;
+  --fontSize-h1: 2.4881rem;
+  --fontSize-h2: 3.0625em;
+}
+
+p {
+  font-size: var(--fontSize-p);
+}
+
+h2 {
+  font-size: var(--fontSize-h2);
+}
+
+body {
+  font-family: "Inter";
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburger:checked ~ .links {
+  transform: translateY(0);
+  transition: all 0.2s ease-in;
+}
+
+#hamburger:checked ~ .hamburger span {
+  background-color: var(--color-white);
+}
+
+.hamburger {
+  position: relative;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 4px;
+  background-color: var(--color-black);
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  z-index: 2;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+#hamburger:checked ~ .hamburger span:nth-child(1) {
+  opacity: 0;
+}
+
+#hamburger:checked ~ .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  top: 6px;
+}
+
+#hamburger:checked ~ .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 6px;
+}
+
+.links {
+  background-color: var(--color-black);
+  transform: translateY(-100%);
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.links a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline var(--color-green);
+}
+
+.links span a:hover {
+  text-decoration: none;
+}
+
+.links {
+  overflow: visible;
+}
+
+.links li {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.links li:hover {
+  transform: scale(1.1);
+}
+
+.logo img {
+  width: 200px;
+}
+.btn {
+  background-color: var(--color-green);
+  color: var(--color-black);
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #00c893;
+}
+
+.btn:active {
+  background-color: #17fec0;
+}
+
+footer {
+  background-color: var(--color-green);
+  padding: 100px 30px;
+}
+
+.logo-footer {
+  max-width: 300px;
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.footer-left p {
+  color: var(--color-black);
+}
+.social-icons img {
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.second {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.third {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-right span {
+  font-weight: 600;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-bottom p {
+  color: var(--color-black);
+}
+.footer-content {
+  margin: 0 auto;
+}
+
+.adventures {
+  padding: 0px 30px;
+  text-align: center;
+}
+
+.adventures h1 {
+  font-size: var(--fontSize-h2);
+}
+
+.adventures img {
+  max-width: 100%;
+}
+
+.mission {
+  background-color: var(--color-black);
+  padding: 100px 30px;
+  margin: 100px 0px;
+  text-align: center;
+}
+
+.mission h2,
+.mission p {
+  color: var(--color-white);
+}
+
+.people {
+  text-align: center;
+  padding: 0px 30px;
+}
+
+.people div {
+  margin-top: 50px;
+}
+
+.people div article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.people div article span {
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.people div article p {
+  margin: 0;
+}
+
+.people div article img {
+  width: 20%;
+}
+
+.collabs {
+  text-align: center;
+  padding: 0px 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.collabs img {
+  width: 400px;
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  .footer-left {
+    text-align: center;
+  }
+  .footer-content {
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: none;
+  }
+  .links {
+    position: static;
+    transform: none;
+    transition: none;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+  }
+  .links a {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+  .links span {
+    background-color: var(--color-green);
+    color: var(--color-black);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .links span:hover {
+    background-color: #00c893;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rules {
+    display: flex;
+    gap: 30px;
+  }
+
+  .adventures img {
+    max-width: 80%;
+  }
+
+  .people div article img {
+    /*verder doen */
+    width: 10%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  nav ul {
+    gap: 50px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .links span {
+    padding: 18px 15px;
+  }
+
+  .links span:hover {
+    background-color: #00c893;
+  }
+
+  .links {
+    background-color: transparent;
+  }
+
+  header {
+    padding: 0px 100px;
+  }
+
+  header::before {
+    max-width: 500px;
+    top: -200%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1500px;
+  }
+
+  .footer-left {
+    text-align: start;
+  }
+
+  footer {
+    padding: 100px 100px;
+  }
+
+  .adventures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .adventures img {
+    max-width: 40%;
+  }
+
+  .adventures h1,
+  .adventures p {
+    text-align: start;
+    max-width: 600px;
+  }
+
+  .mission {
+    padding: 100px 100px;
+  }
+
+  .people div article img {
+    width: 40%;
+  }
+
+  .people {
+    padding: 0px 100px;
+  }
+
+  .people div {
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px 300px;
+  }
+
+  .collabs img {
+    margin-top: 50px;
+  width: 50vw;
+  height: auto;
+}
+  
+
+  .collabs p {
+    width: 50%;
+    margin: 0 auto;
+    
+  }
+}
